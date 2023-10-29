@@ -8,7 +8,11 @@ const counter = require('./src/counter')
 console.log(counter.DischargeDate(new Date('2022-10-17')))
 
 app.get('/', (req, res) => {
-    res.send('hello world')
+    res.send({
+        "전역일": counter.DischargeDate(new Date('2022-10-17')), 
+        "이때까지": counter.DateDifference(new Date('2022-10-17')),
+        "남은 날": counter.DateDifference(counter.DischargeDate(new Date('2022-10-17')))
+    })
 })
 
 
