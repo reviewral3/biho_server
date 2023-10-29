@@ -1,5 +1,3 @@
-
-
 function DateDifference(date1, current_date) {
     const diffInMs = Math.abs(current_date - date1);
   
@@ -30,8 +28,14 @@ const current_date = new Date();
 
 const after_enlist = DateDifference(my_enlist_date, current_date);
 const until_discharge = DateDifference(my_discharge_date, current_date);
+
 console.log('after', after_enlist);
 console.log('rest_date', until_discharge);
 
 
 console.log(DischargeDate(my_enlist_date));
+
+module.exports = {
+    DateDifference, 
+    DischargeDate
+}

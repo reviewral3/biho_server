@@ -1,6 +1,12 @@
 const express = require('express')
 const app = express()
 
+const counter = require('./src/counter')
+
+// import { someVariable, someFunction } from './counter';
+
+console.log(counter.DischargeDate(new Date('2022-10-17')))
+
 app.get('/', (req, res) => {
     res.send('hello world')
 })
